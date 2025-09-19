@@ -27,7 +27,7 @@ This project trains and compares various models to forecast the total amount of 
 
 - There are seasonal spike around months 11 & 23 indicating holiday buying
 - There is trend of sales decline over the years and rising average prices over time.
-- KNN and RandomForest are the top performing models so far
+- KNN, Ridge and Linear Regression are the top performing models so far
 
 ## How to Run
 
