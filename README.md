@@ -51,7 +51,6 @@ This project trains and compares various models to forecast the total amount of 
 - Regularization and Learning rate tuning in XGBoost helped to achieve balanced bias-varianace trade off.
 
 ## SHAP
-
 - item_cnt_month_lag_1 is the most influential feature
 - pct_change_lag1 and item_total_popularity also have significant predictive power
 - Features like item_cnt_month_lag_2, item_cnt_month_lag_3 and month show smaller but consistent SHAP impacts, indicating mild seasonality and lag persistence.
