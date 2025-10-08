@@ -38,7 +38,7 @@ This project trains and compares various models to forecast the total amount of 
 | :--- | :--- | :--- |
 | **Random Forest** | **1.26** | 443.58 |
 | **XGBoost** | **1.28** | 224.21 |
-| **LightGBM** |** 1.37** | 51.52 |
+| **LightGBM** | ** 1.37** | 51.52 |
 | HistGradientBoosting | 1.39 | 744.67 |
 | Decision Tree | 1.49 | 48.56 |
 | Linear Regression | 1.50 | 4.36 |
