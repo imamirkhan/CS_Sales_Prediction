@@ -26,11 +26,11 @@ This project trains and compares various models to forecast the total amount of 
 ## Key Findings
 
 - Most items were prices below 5k
-![sales](https://github.com/imamirkhan/PA_CC/images/monthly_sales.png)
+![sales](https://github.com/imamirkhan/CS_Sales_Prediction/images/monthly_sales.png)
 - There are seasonal spike around Nov-Dec indicating holiday buying
-![monthly sales](https://github.com/imamirkhan/PA_CC/images/monthly_sales.png)
+![monthly sales](https://github.com/imamirkhan/CS_Sales_Prediction/images/monthly_sales.png)
 - There is trend of sales decline over the years and rising average prices over time.
-![trend](https://github.com/imamirkhan/PA_CC/images/sales-trend.png)
+![trend](https://github.com/imamirkhan/CS_Sales_Prediction/images/sales-trend.png)
 - XGBoost, RandomForest and LightGBM were the top performing models based on RMSE are were selected for hyper-tuning
 - XGBoost performed the best with hypertuning and was selected as the best model.
 
