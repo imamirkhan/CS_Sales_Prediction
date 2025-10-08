@@ -14,20 +14,25 @@ This project trains and compares various models to forecast the total amount of 
 	- item_categories.csv: contains the category name and id
 	- shops.csv: contains the shop name and shop id
 	- test.csv: data to forecast the final model.
-	- 
+- 'images folder': Contains the graphs 
 - 'README.md': Project overview and summary of findings.
 
 ## Modeling Summary
 
-- Linear Regression, Ridge Regression, ARIMA, Decision Tree, Random Forest, KNN, XGBoost
-- Models are evaluated using RMSE
+- Dummy Regressor, Linear Regression, Ridge Regression, Decision Tree, Random Forest, XGBoost,LightGBM
+- Models were evaluated using RMSE
 
 
 ## Key Findings
 
-- There are seasonal spike around months 11 & 23 indicating holiday buying
+- Most items were prices below 5k
+![sales](https://github.com/imamirkhan/PA_CC/images/monthly_sales.png)
+- There are seasonal spike around Nov-Dec indicating holiday buying
+![monthly sales](https://github.com/imamirkhan/PA_CC/images/monthly_sales.png)
 - There is trend of sales decline over the years and rising average prices over time.
-- KNN, Ridge and Linear Regression are the top performing models so far
+![trend](https://github.com/imamirkhan/PA_CC/images/sales-trend.png)
+- XGBoost, RandomForest and LightGBM were the top performing models based on RMSE are were selected for hyper-tuning
+- XGBoost performed the best with hypertuning and was selected as the best model.
 
 ## How to Run
 
