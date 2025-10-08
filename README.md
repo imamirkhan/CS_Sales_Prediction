@@ -50,7 +50,7 @@ This project trains and compares various models to forecast the total amount of 
 - After trying out the models and hyperparameter tuning using optuna, XGBoost model emerged as top performer.
 - Regularization and Learning rate tuning in XGBoost helped to achieve balanced bias-varianace trade off.
 
-##SHAP
+## SHAP
 
 - item_cnt_month_lag_1 is the most influential feature
 - pct_change_lag1 and item_total_popularity also have significant predictive power
