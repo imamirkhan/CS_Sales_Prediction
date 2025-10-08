@@ -18,15 +18,7 @@ This project trains and compares various models to forecast the total amount of 
 - 'best_model_xgb': The best model joblib file
 - 'README.md': Project overview and summary of findings.
 
-## Modeling Summary
-
-- Dummy Regressor, Linear Regression, Ridge Regression, Decision Tree, Random Forest, XGBoost,LightGBM
-- Models were evaluated using RMSE
-
-## Modeling Results
-
-
-## Key Findings
+## Key EDA Findings
 
 - Most items were prices below 5k
 ![sales](https://github.com/imamirkhan/CS_Sales_Prediction/blob/main/images/monthly_sales.png)
@@ -34,8 +26,36 @@ This project trains and compares various models to forecast the total amount of 
 ![monthly sales](https://github.com/imamirkhan/CS_Sales_Prediction/blob/main/images/sales-trend.png)
 - There is trend of sales decline over the years and rising average prices over time.
 ![trend](https://github.com/imamirkhan/CS_Sales_Prediction/blob/main/images/sales-trend.png)
-- XGBoost, RandomForest and LightGBM were the top performing models based on RMSE are were selected for hyper-tuning
-- XGBoost performed the best with hypertuning and was selected as the best model.
+
+## Modeling Summary
+
+- Dummy Regressor, Linear Regression, Ridge Regression, Decision Tree, Random Forest, XGBoost,LightGBM
+- Models were evaluated using RMSE
+
+## Model Performance Comparison
+
+| Model | RMSE | Training Time (s) |
+| :--- | :--- | :--- |
+| **Random Forest** | **1.26** | 443.58 |
+| **XGBoost** | **1.28** | 224.21 |
+| LightGBM | 1.37 | 51.52 |
+| HistGradientBoosting | 1.39 | 744.67 |
+| Decision Tree | 1.49 | 48.56 |
+| Linear Regression | 1.50 | 4.36 |
+| Ridge Regression | 1.50 | 1.89 |
+| Dummy Regressor | 2.41 | 0.09 |
+
+## Hypertuning
+- Top 3 models were selected for hypertuning. 
+- After trying out the models and hyperparameter tuning using optuna, XGBoost model emerged as top performer.
+- Regularization and Learning rate tuning in XGBoost helped to achieve balanced bias-varianace trade off.
+
+##SHAP
+
+- item_cnt_month_lag_1 is the most influential feature
+- pct_change_lag1 and item_total_popularity also have significant predictive power
+- Features like item_cnt_month_lag_2, item_cnt_month_lag_3 and month show smaller but consistent SHAP impacts, indicating mild seasonality and lag persistence.
+![trend](https://github.com/imamirkhan/CS_Sales_Prediction/blob/main/images/SHAP.png)
 
 ## Conclusion:
 The objective of this project was to predict future item sales for various shops. Throuh systematic data cleaning, feature engineering and model optimization, machine learning pipeline is developed to forecast monthly sales.
@@ -44,8 +64,7 @@ The objective of this project was to predict future item sales for various shops
 - Tree-based ensemble models are more robust than linear models because of their ability to handle non-linear and temporal data effectively.
 - Temporal and lag based features improved forecasting accuracy.
 - Feature engineering and item-shop grid helped to handle seasonal trends, item and store level variations.
-- After trying out various models and hyperparameter tuning using optuna, XGBoost model emerged as top performer.
-- Regularization and Learning rate tuning in XGBoost helped to achieve balanced bias-varianace trade off.
+
 
 ## How to Run
 
