@@ -54,7 +54,7 @@ This project trains and compares various models to forecast the total amount of 
 - item_cnt_month_lag_1 is the most influential feature
 - pct_change_lag1 and item_total_popularity also have significant predictive power
 - Features like item_cnt_month_lag_2, item_cnt_month_lag_3 and month show smaller but consistent SHAP impacts, indicating mild seasonality and lag persistence.
-![shap](https://github.com/imamirkhan/CS_Sales_Prediction/blob/main/images/SHAP.png)
+![shap](https://github.com/imamirkhan/CS_Sales_Prediction/blob/main/images/Shap.png)
 
 ## Conclusion:
 The objective of this project was to predict future item sales for various shops. Throuh systematic data cleaning, feature engineering and model optimization, machine learning pipeline is developed to forecast monthly sales.
